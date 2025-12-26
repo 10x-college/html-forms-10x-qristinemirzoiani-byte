@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovian Drift SOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <iframe id="bg-frame" src="effect.html"></iframe>
+    <!-- 1: The Transmission Protocol -->
+     <header>
+    <h1>🚨 Jovian Drift SOS Transmission</h1>
+    <p>Emergency distress signal interface for shuttle <strong>Europa-1</strong></p>
+  </header>
+  <main>
+    <!--2: Pilot Credentials-->
+    <form method="post" action="#">
+        <fieldset>
+            <legend>Pilot Credentials</legend>
+            <label for="Pilot Name:">Pilot Name:</label>
+            <input type="text" 
+            id="pilot name" name="pilot_name" 
+            placeholder="Enter name" required>
+           <br><br>
+            <label for="access-code">Access Code:</label>
+            <input type="password" id="access-code" name="access_code" required>
+            <br><br>
+            <label for="command-email">Command Email:</label>
+            <input type="email" id="command-email" name="email" required>
+        </fieldset>
+        <!--3: Vessel Diagnostics-->
+        <fieldset>
+            <legend>Vessel Diagnostics</legend>
+            <label for="Hull Damage (%):">Hull Damage (%):</label>
+            <input type="number" id="hull-damage" name="hull_damage" min="0" max="100" required>
+            <br><br>
+            <label for="Emergency Level:">Emergency Level:</label>
+            <select id="emergency-level" name="emergency_level" required>
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
+            </select>
+        </fieldset>
+        <br>
+        <!--4: Mission Log & Evidence-->
+        <fieldset>
+            <legend>Mission Log & Evidence</legend>
+            <label for="SOS Message:">SOS Message:</label>
+            <textarea id="sos-message" name="sos_message" required rows="3"></textarea>
+        </fieldset>
+        <br>
+        <fieldset>
+        <legend>Quarantine Agreement</legend>
+        <input type="checkbox" id="quarantine" name="quarantineAgreement" required>
+        <label for="quarantine">I agree to quarantine protocols.</label>
+        </fieldset>
+        <!--5: The Control Panel-->
+        <br>
+         <fieldset>
+          <legend>Control Panel</legend>
+          <button type="submit">INITIATE TRANSMISSION</button>
+          <button type="reset">RESET SYSTEM</button>
+        </fieldset>
+    </form>
+  </main>
+  <script src="launch.js"></script>
+</body>
+</html>
